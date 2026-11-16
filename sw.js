@@ -1,5 +1,5 @@
 // Offline-first service worker.
-const CACHE = 'wb-quotes-v3';
+const CACHE = 'wb-quotes-v4';
 const SHELL = ['./', 'index.html', 'manifest.webmanifest', 'icon-192-v2.png', 'icon-512-v2.png', 'apple-touch-icon-v2.png'];
 self.addEventListener('install', e => { self.skipWaiting(); e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL).catch(() => {}))); });
 self.addEventListener('activate', e => { e.waitUntil((async () => {
